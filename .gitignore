@@ -20,6 +20,7 @@
 /build
 /detail
 /details
+/public/assets
 payload.zip
 # misc
 .DS_Store
