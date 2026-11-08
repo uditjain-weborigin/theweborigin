@@ -19,7 +19,7 @@ import { LenisProvider } from '@/utils/LenisProvider'
 
 export async function generateMetadata(): Promise<Metadata> {
   const [favicon, description] = await Promise.all([getSite('favicon'), getSite('description')])
-  const uploadedFavicon = favicon?.url ?? '/payload-favicon.svg'
+  const uploadedFavicon = favicon?.url || '/payload-favicon.svg'
 
   return {
     description: description || 'A blank template using Payload in a Next.js app.',
