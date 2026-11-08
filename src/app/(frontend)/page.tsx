@@ -27,7 +27,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <BodyClasses classes={[`type--${type}`, `single--${type}`, 'pages--home']} />
+      <BodyClasses classes={['is-home', `type--${type}`, `single--${type}`, 'pages--home']} />
       <Welcome {...page} />
       <Content page={page} />
       <Flexible {...page} />
