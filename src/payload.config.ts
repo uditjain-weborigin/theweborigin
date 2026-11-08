@@ -30,6 +30,7 @@ import { FaqsArchive } from './collections/archives/FaqsArchive/FaqsArchive'
 import { Faqs } from './collections/singles/Faqs/Faqs'
 import { PostsTags } from './collections/taxonomies/PostsTags/PostsTags'
 import { PostsTagsArchive } from './collections/archives/PostsTagsArchive/PostsTagsArchive'
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -106,6 +107,13 @@ export default buildConfig({
           group: 'Forms',
         },
       },
+    }),
+    vercelBlobStorage({
+      collections: {
+        media: true,
+      },
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+      clientUploads: true,
     }),
   ],
 })
