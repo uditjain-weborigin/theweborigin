@@ -25,6 +25,7 @@ import { LinkLabel as LinkLabel_2105d0907bcde4272bb3fc3fc5347cfa } from '@/confi
 import { CustomRowLabel as CustomRowLabel_8309f153e97cb057a7abcbac21aad185 } from '@/config/custom/CustomRowLabel'
 import { CustomWelcomeLabel as CustomWelcomeLabel_9e8eb85f02c02c048ef2f1f77d77b75a } from '@/config/custom/CustomWelcomeLabel'
 import { default as default_a2fc6482981e15240b50469d5d044d0b } from '@/style'
+import { VercelBlobClientUploadHandler as VercelBlobClientUploadHandler_16c82c5e25f430251a3e3ba57219ff4e } from '@payloadcms/storage-vercel-blob/client'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
 
 /** @type import('payload').ImportMap */
@@ -56,5 +57,6 @@ export const importMap = {
   "@/config/custom/CustomRowLabel#CustomRowLabel": CustomRowLabel_8309f153e97cb057a7abcbac21aad185,
   "@/config/custom/CustomWelcomeLabel#CustomWelcomeLabel": CustomWelcomeLabel_9e8eb85f02c02c048ef2f1f77d77b75a,
   "@/style#default": default_a2fc6482981e15240b50469d5d044d0b,
+  "@payloadcms/storage-vercel-blob/client#VercelBlobClientUploadHandler": VercelBlobClientUploadHandler_16c82c5e25f430251a3e3ba57219ff4e,
   "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1
 }
