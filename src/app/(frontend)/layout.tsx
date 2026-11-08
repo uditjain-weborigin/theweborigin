@@ -18,11 +18,11 @@ import FrontendScripts from '@/utils/FrontendScripts'
 import { LenisProvider } from '@/utils/LenisProvider'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const favicon = await getSite('favicon')
+  const [favicon, description] = await Promise.all([getSite('favicon'), getSite('description')])
   const uploadedFavicon = favicon?.url ?? '/payload-favicon.svg'
 
   return {
-    description: 'A blank template using Payload in a Next.js app.',
+    description: description || 'A blank template using Payload in a Next.js app.',
     title: 'Home',
     icons: {
       icon: uploadedFavicon,
