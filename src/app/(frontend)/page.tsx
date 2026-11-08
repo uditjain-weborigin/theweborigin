@@ -6,6 +6,11 @@ import { Flexible } from '@/components/Flexible'
 import { capitalize } from '@/helper/capitalize'
 import { Content } from '@/components/sections/Content/Content'
 
+// Payload is queried directly from MongoDB, so Next.js cannot infer that this
+// page depends on live data. Render it per request instead of freezing it at
+// build time.
+export const dynamic = 'force-dynamic'
+
 export async function generateMetadata(): Promise<any> {
   const type = 'pages'
   const page = await getBySlug(type, 'home')
