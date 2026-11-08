@@ -27,8 +27,8 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en" className="no-js reak-dark">
       <body data-bg-color="#0D0D0D">
-        {/* <Preloader /> */}
-        {/* <OffCanvas /> */}
+        <Preloader />
+        <OffCanvas />
         <LenisProvider>
           <Header />
           <main>{children}</main>
