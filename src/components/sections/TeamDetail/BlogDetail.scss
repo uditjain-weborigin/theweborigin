@@ -1,0 +1,22 @@
+.postbox-dsc {
+  h3 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-bottom: 50px;
+  }
+
+  picture {
+    width: 100%;
+    aspect-ratio: 838/411;
+    margin-bottom: 50px;
+    display: block;
+
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+}
