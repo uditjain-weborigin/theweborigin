@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { getSite } from '@/helper/fetch'
 import { Header } from '@/components/sections/Header/Header'
 import { Footer } from '@/components/sections/Footer/Footer'
 import { Preloader } from '@/components/sections/Preloader/Preloader'
@@ -16,14 +17,21 @@ import '@/assets/css/reak.css'
 import FrontendScripts from '@/utils/FrontendScripts'
 import { LenisProvider } from '@/utils/LenisProvider'
 
-export const metadata: Metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Home',
+export async function generateMetadata(): Promise<Metadata> {
+  const favicon = await getSite('favicon')
+  const uploadedFavicon = favicon?.url ?? '/payload-favicon.svg'
+
+  return {
+    description: 'A blank template using Payload in a Next.js app.',
+    title: 'Home',
+    icons: {
+      icon: uploadedFavicon,
+    },
+  }
 }
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
-
   return (
     <html lang="en" className="no-js reak-dark">
       <body data-bg-color="#0D0D0D">
