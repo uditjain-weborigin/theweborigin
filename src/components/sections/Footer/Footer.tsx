@@ -21,7 +21,7 @@ export async function Footer() {
   const footerLogoAlt = footerLogo?.alt || siteTitle || 'Footer Logo'
 
   return (
-    <footer data-bg-color="#101216">
+    <footer data-bg-color="#101216" style={{ overflow: 'hidden' }}>
       <div className="oit-footer-2-area z-index-1 pt-130 pb-30 p-relative">
         {footerShape && (
           <img className="oit-footer-2-shape" src={footerShape.url} alt={footerShape.alt} />
