@@ -1,4 +1,5 @@
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { resendAdapter } from '@payloadcms/email-resend'
 import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
@@ -34,8 +35,17 @@ import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+const serverURL = process.env.PAYLOAD_PUBLIC_SERVER_URL || 'http://localhost:3000'
 
 export default buildConfig({
+  serverURL,
+  cors: [serverURL],
+  csrf: [serverURL],
+  email: resendAdapter({
+    defaultFromAddress: process.env.EMAIL_FROM_ADDRESS || '',
+    defaultFromName: process.env.EMAIL_FROM_NAME || '',
+    apiKey: process.env.RESEND_API_KEY || '',
+  }),
   admin: {
     user: Users.slug,
     components: {
