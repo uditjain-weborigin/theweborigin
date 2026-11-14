@@ -37,6 +37,8 @@
   --oit-grey-2: #494949;
   --oit-text-body: #5d5d5d;
   --oit-theme-1: #000;
+  --oit-blue: #2DB6EA;
+  --oit-green: #75CA4D;
   --oit-border-1: #eaebed;
 }
 
@@ -3009,6 +3011,10 @@ input[type='color'] {
   margin-bottom: 35px;
   letter-spacing: -0.01em;
   color: var(--oit-clr-white);
+}
+
+.oit-hero-content p strong {
+  color: var(--oit-blue);	
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .oit-hero-content p {
