@@ -28,6 +28,7 @@
 /*  1.1 Theme Css
 /*----------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Funnel+Display:wght@300..800&amp;display=swap');
+@import url('../fonts/stylesheet.css');
 :root {
   /**=========== color ===========*/
   --oit-clr-white: #fff;
@@ -41,10 +42,10 @@
 
 :root {
   /**========== font family ==============*/
-  --oit-ff-body: 'Plus Jakarta Sans', sans-serif;
+  --oit-ff-body: 'Ibrand', sans-serif;
   --oit-ff-heading: 'Funnel Display', sans-serif;
   --oit-ff-funnel: 'Funnel Display', sans-serif;
-  --oit-ff-p: 'Plus Jakarta Sans', sans-serif;
+  --oit-ff-p: 'Ibrand', sans-serif;
   --oit-ff-fontawesome: 'Font Awesome 6 Pro';
 }
 
